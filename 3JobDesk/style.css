@@ -1,0 +1,564 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+
+  color: #3b3d3f;
+  font-family: "Lato", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.main-btn {
+  display: inline;
+}
+
+.m-b {
+  height: 35px;
+  width: 170px;
+  font-size: 16px;
+  background-color: #8696FE;
+  color: black;
+  margin-top: 10px;
+  box-shadow: #4942E4;
+}
+
+/***************** pie charts *************/
+.pie-chart {
+  background:
+    radial-gradient(circle closest-side,
+      transparent 27%,
+      white 0),
+    conic-gradient(#0eb1ce 0,
+      #0bc0a8 38%,
+      #bcbe0e 0,
+      #bcbe0e 61%,
+      #bcbe0e 0,
+      #bcbe0e 0,
+      #bcbe0e 87%,
+
+      #bcbe0e 0,
+      #bcbe0e 100%);
+  position: relative;
+  width: 270px;
+  min-height: 350px;
+  margin: 0;
+  outline: 1px solid #ccc;
+}
+
+.pie-chart h2 {
+  position: absolute;
+  margin: 1rem;
+}
+
+.pie-chart figcaption {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: smaller;
+  text-align: right;
+}
+
+.pie-chart span:after {
+  display: inline-block;
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.4em;
+  height: 0.8em;
+  border-radius: 0.2em;
+  background: currentColor;
+}
+
+
+
+
+.sidebar {
+  width: 240px;
+  height: -moz-max-content;
+  height: max-content;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar #leftside-navigation .sidebar__logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.sidebar #leftside-navigation .sidebar__logo h2 {
+  margin-left: 1rem;
+}
+
+.sidebar #leftside-navigation ul,
+.sidebar #leftside-navigation ul ul {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+.sidebar #leftside-navigation ul li {
+  list-style-type: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+}
+
+.sidebar #leftside-navigation ul li.active>a {
+  color: #11009E;
+}
+
+.sidebar #leftside-navigation ul li.active ul {
+  display: block;
+}
+
+.sidebar #leftside-navigation ul li a {
+  color: #3b3d3f;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 0 18px 25px;
+  font-size: 1rem;
+  outline: 0;
+  transition: all 200ms ease-in;
+  position: relative;
+}
+
+.sidebar #leftside-navigation ul li a:hover {
+  color: #8696FE;
+}
+
+.sidebar #leftside-navigation ul li a span {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.sidebar #leftside-navigation ul li a i {
+  width: 20px;
+  position: absolute;
+  right: 1rem;
+}
+
+.sidebar #leftside-navigation ul li a i .fa-angle-left,
+.sidebar #leftside-navigation ul li a i .fa-angle-right {
+  padding-top: 3px;
+}
+
+.sidebar #leftside-navigation ul ul {
+  display: none;
+}
+
+.sidebar #leftside-navigation ul ul li {
+  background: #f9f9f9;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: none;
+}
+
+.sidebar #leftside-navigation ul ul li a {
+  font-size: 0.8rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #4942E4;
+}
+
+.fa-user {
+  height: 60px;
+  width: 60px;
+}
+
+main {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+.dashboard-content {
+  background-color: #f9f9f9;
+  width: 95%;
+  margin: auto;
+}
+
+.dashboard-content .first-section {
+  display: flex;
+  justify-content: end;
+}
+
+.dashboard-content .first-section button {
+  background: #4942E4;
+  color: white;
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.dashboard-content .second-section {
+  padding: 1rem;
+}
+
+.dashboard-content .second-section .cards {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.dashboard-content .second-section .card {
+  text-align: center;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1rem;
+}
+.dashboard-content .third-section .card button{
+  background-color: #8696FE;
+  color: #f9f9f9;
+  padding: 0.75rem 1rem;
+  outline: 0px solid black;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  width: 150px;
+}
+
+.dashboard-content .second-section .card .title {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.dashboard-content .second-section .card .count {
+  font-size: 19px;
+  font-weight: bolder;
+}
+
+.dashboard-content .second-section .card:hover {
+  cursor: pointer;
+}
+
+.dashboard-content .third-section {
+  padding: 1rem 2rem;
+}
+
+.dashboard-content .third-section .stats {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-content .third-section .stats .filters {
+  font-size: 14px;
+  margin-left: 2rem;
+}
+
+.dashboard-content .third-section .stats .filters span {
+  background-color: #eae3ff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.dashboard-content .third-section .charts {
+  display: flex;
+  padding-top: 2rem;
+}
+
+.dashboard-content .third-section .charts .title {
+  font-size: 14px;
+}
+
+.dashboard-content .third-section .charts .bar-chart {
+  width: 50%;
+}
+
+.dashboard-content .third-section .charts .pie-chart {
+  width: 50%;
+}
+
+/*# sourceMappingURL=sass.css.map */
+/**************** form *****************/
+
+
+label {
+  font-size: 14px;
+  margin-left: 25px;
+  margin-top: 60px;
+}
+
+#name {
+  height: 30px;
+  padding: 10px;
+  margin: 10px each;
+  white-space: 5px;
+  margin-left: 25px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.form {
+  margin-top: 10px;
+  padding: 20px;
+
+
+}
+
+form input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+form input[type=date] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+form input[type=time] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+form input[type=number] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.month {
+  padding: 10px 3px;
+  width: 100%;
+  background: #80d7e3;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 3rem;
+}
+
+.month ul li {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* .month .left {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .right {
+  float: right;
+  padding-top: 10px;
+*/
+
+@media screen and (max-width: 600px) {
+
+  .form,
+  .form,
+  input[type=text] {
+    width: 50%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .form,
+  .form,
+  input[type=date] {
+    width: 50%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .form,
+  .form,
+  input[type=time] {
+    width: 50%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .form,
+  .form,
+  input[type=number] {
+    width: 50%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+    font-size: 12px;
+    
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+
+  .days li .active {
+    padding: 2px;
+    font-size: 12px;
+   
+  }
+}
+
+@media screen and (max-width: 290px) {
+
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+
+  .card,
+  .m-b {
+    width: 13.1%;
+    font-size: 12px;
+  
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .card,
+  .m-b {
+    width: 12.5%;
+  }
+
+  .card,
+  .m-b {
+    padding: 2px;
+    font-size: 12px;
+ 
+  }
+}
+
+@media screen and (max-width: 290px) {
+
+  .card,
+  .m-b {
+    width: 12.2%;
+  }
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+
+  .form,
+  #name {
+    width: 13.1%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .form,
+  #name {
+    width: 12.5%;
+  }
+
+  .form,
+  #name {
+    padding: 2px;
+    font-size: 12px;
+
+  }
+}
+
+@media screen and (max-width: 290px) {
+
+  .form,
+  #name {
+    width: 12.2%;
+    font-size: 12px;
+    
+  }
+}
